@@ -92,6 +92,11 @@
         </dependency>
 
         <dependency>
+            <groupId>io.servicecomb</groupId>
+            <artifactId>spring-boot-starter-servicecomb</artifactId>
+            <version>0.5.0</version>
+        </dependency>
+        <dependency>
             <!--让服务运行于微服务sdk容器中-->
             <groupId>io.servicecomb</groupId>
             <artifactId>spring-boot-starter-provider</artifactId>
@@ -109,21 +114,6 @@
             <artifactId>spring-boot-starter-transport</artifactId>
             <version>0.5.0</version>
         </dependency>
-
-        <dependency>
-            <!--使用服务中心-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-discovery</artifactId>
-            <version>0.5.0</version>
-        </dependency>
-
-
-        <dependency>
-            <!--分布式追踪链-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>handler-tracing-zipkin</artifactId>
-            <version>0.5.0</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -134,6 +124,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
