@@ -1,10 +1,8 @@
 package com.wisrc.basic;
 
-import io.servicecomb.springboot.starter.provider.EnableServiceComb;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -14,8 +12,6 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(
    basePackages = {"com"}
 )
-@EnableDiscoveryClient
-@EnableServiceComb
 public class BasicApplication {
 
     public static void main(String[] args) {
