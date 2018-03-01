@@ -3,6 +3,7 @@ package com.wisrc.webapp.controller;
 
 import com.wisrc.webapp.entity.SysSecUser;
 import com.wisrc.webapp.service.UserInfoService;
+import io.servicecomb.provider.rest.common.RestSchema;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,7 @@ import java.util.List;
 
 @RestController
 @Api(value = "应用首页控制器")
+@RestSchema(schemaId = "test")
 public class Index {
 
     @Autowired
