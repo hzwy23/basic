@@ -14,7 +14,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>2.0.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -23,6 +23,19 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.M7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <dependencies>
         <!--<dependency>-->
@@ -76,48 +89,30 @@
             <version>2.7.0</version>
         </dependency>
 
-        <!--druid 依赖组件，使用这个组件，一定要引入spring-boot-starter-actuator-->
+        <!--druid 依赖组件，使用这个组件，一定要引入spring-boot-starter-actuator
+            1.1.8_20180212 版本是对spring-boot 2.0.0.RELEASE的补充
+            等待后续druid更新了版本之后，将会更新version里边的值
+        -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.7</version>
+            <version>1.1.8_20180212</version>
+        </dependency>
+
+        <!--连接服务与发现路由-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <version>2.0.0.M2</version>
         </dependency>
 
         <dependency>
-            <groupId>io.servicecomb</groupId>
-            <artifactId>java-chassis-dependencies</artifactId>
-            <version>0.5.0</version>
-            <type>pom</type>
-            <scope>import</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>2.0.0.M2</version>
         </dependency>
 
-        <dependency>
-            <!--让服务运行于微服务sdk容器中-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-provider</artifactId>
-            <version>0.5.0</version>
-        </dependency>
-        <dependency>
-            <!--使用服务中心-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-discovery</artifactId>
-            <version>0.5.0</version>
-        </dependency>
-        <dependency>
-            <!--让服务运行于Spring boot embedded tomcat中-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-transport</artifactId>
-            <version>0.5.0</version>
-        </dependency>
-
-        <dependency>
-            <!--使用服务中心-->
-            <groupId>io.servicecomb</groupId>
-            <artifactId>spring-boot-starter-discovery</artifactId>
-            <version>0.5.0</version>
-        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>

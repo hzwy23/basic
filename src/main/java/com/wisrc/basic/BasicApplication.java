@@ -1,10 +1,11 @@
 package com.wisrc.basic;
 
-import io.servicecomb.springboot.starter.provider.EnableServiceComb;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
@@ -14,8 +15,11 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(
    basePackages = {"com"}
 )
+@EnableEurekaClient
 @EnableDiscoveryClient
-//@EnableServiceComb
+@EnableFeignClients(
+    basePackages = {"com"}
+)
 public class BasicApplication {
 
     public static void main(String[] args) {

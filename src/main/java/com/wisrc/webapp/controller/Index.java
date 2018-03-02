@@ -27,6 +27,7 @@ public class Index {
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @ApiOperation(value = "查询用户信息", notes = "Mybatis测试使用，查询MySQL数据库中用户信息表的用户信息")
     @ResponseBody
     public String getUserInfo() {
         List<SysSecUser> userList = userInfoService.getAll();
