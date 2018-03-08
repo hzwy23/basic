@@ -1,4 +1,4 @@
-FROM hzwy23/java:1.8
+FROM 100.125.0.198:20202/hzwy23/java:1.8
 
 MAINTAINER zhanwei_huang hzwy23@163.com
 
