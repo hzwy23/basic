@@ -1,11 +1,7 @@
-## 应用服务名称，注册到同一个注册中心的应用名称必须唯一，所以，请根据自己的实际情况，修改应用名称
+## 使用druid配置数据源
 spring:
   application:
     name: basic-test-demo-dev
-
-
-## 使用druid配置数据源
-spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
