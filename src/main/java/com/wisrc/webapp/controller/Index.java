@@ -1,7 +1,7 @@
 package com.wisrc.webapp.controller;
 
 
-import com.wisrc.webapp.entity.SysSecUser;
+import com.wisrc.webapp.entity.UserInfoEntity;
 import com.wisrc.webapp.service.UserInfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -30,9 +30,9 @@ public class Index {
     @ApiOperation(value = "查询用户信息", notes = "Mybatis测试使用，查询MySQL数据库中用户信息表的用户信息")
     @ResponseBody
     public String getUserInfo() {
-        List<SysSecUser> userList = userInfoService.getAll();
+        List<UserInfoEntity> userList = userInfoService.getAll();
         StringBuffer sb = new StringBuffer("");
-        for (SysSecUser m : userList) {
+        for (UserInfoEntity m : userList) {
             sb.append(m.toString()).append("<br/>");
         }
         return sb.toString();

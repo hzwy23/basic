@@ -1,9 +1,9 @@
 package com.wisrc.webapp.service;
 
 
-import com.wisrc.webapp.entity.SysSecUser;
+import com.wisrc.webapp.entity.UserInfoEntity;
 import java.util.List;
 
 public interface UserInfoService {
-    List<SysSecUser> getAll();
+    List<UserInfoEntity> getAll();
 }
