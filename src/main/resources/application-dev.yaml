@@ -1,7 +1,7 @@
 ## 使用druid配置数据源
 spring:
   application:
-    name: basic-test-demo-dev
+    name: basic-demo-dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
