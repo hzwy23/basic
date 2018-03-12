@@ -21,3 +21,5 @@ eureka:
       defaultZone: http://192.168.0.100:8761/eureka,http://192.168.0.171:8761/eureka
   instance:
     prefer-ip-address: true
+    ip-address: 49.4.2.78
+    instance-id: 49.4.2.78:8791

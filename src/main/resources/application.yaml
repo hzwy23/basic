@@ -8,5 +8,8 @@ logging:
     root: info
 
 ## web服务开启端口
+# context-path 表示所有api的前缀
 server:
   port: 8791
+  servlet:
+    context-path: /demo
