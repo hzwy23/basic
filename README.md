@@ -14,7 +14,7 @@
 ## 配置文件介绍
 java基础框架的配置信息在resource目录中，目录中共有4个配置文件，分别是：
 ```shell
-application.yaml         --应用启动后一定会读取的配置文件
+application.yaml         -- 应用启动后一定会读取的配置文件
 application-dev.yaml     -- spring.profiles.active = dev时读取的配置文件
 application-test.yaml    -- spring.profiles.active = test时读取的配置文件
 application-prod.yaml    -- spring.profiles.active = prod时读取的配置文件
