@@ -7,6 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
 @MapperScan(
@@ -20,6 +21,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients(
     basePackages = {"com"}
 )
+@ImportResource(locations = {"spring-config.xml"})
 public class BasicApplication {
 
     public static void main(String[] args) {
