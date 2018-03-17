@@ -21,7 +21,7 @@ import org.springframework.context.annotation.ImportResource;
 @EnableFeignClients(
     basePackages = {"com"}
 )
-@ImportResource(locations = {"spring-config.xml"})
+@ImportResource(locations = {"bean/spring-config.xml"})
 public class BasicApplication {
 
     public static void main(String[] args) {

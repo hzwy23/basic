@@ -1,4 +1,4 @@
-# basic 基础框架介绍
+# erp-server-template-java 基础框架介绍
 
 ## 主要集成功能
 - **spring-boot 2.0.0**
@@ -10,6 +10,7 @@
 - **thymeleaf 模板组件**
 - **eureka客户端**
 - **Feign组件**
+- **PageHelper 分页插件**
 
 ## 配置文件介绍
 java基础框架的配置信息在resource目录中，目录中共有4个配置文件，分别是：
@@ -39,7 +40,7 @@ logging:
 ## web服务开启端口
 # context-path 表示所有api的前缀
 server:
-  port: 8791
+  port: 8080
   servlet:
     context-path: /demo
 ```
@@ -88,9 +89,9 @@ eureka:
 
 ## 编译运行方法
 ```shell
-git clone https://gitee.com/hzwy23/basic.git
-cd basic
+git clone https://gitee.com/sdit/erp-server-template-java.git
+cd erp-server-template-java
 mvn clean package -DskipTests=true
 ```
 验证方法：
-> 在浏览器中输入： http://localhost:8791/demo
+> 在浏览器中输入： http://localhost:8080/demo

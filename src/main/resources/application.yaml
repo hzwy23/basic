@@ -10,6 +10,6 @@ logging:
 ## web服务开启端口
 # context-path 表示所有api的前缀
 server:
-  port: 8791
+  port: 8080
   servlet:
     context-path: /demo
