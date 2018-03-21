@@ -10,6 +10,6 @@ WORKDIR basic
 
 RUN mvn clean package -DskipTests=true
 
-EXPOSE 8791
+EXPOSE 8080
 
 CMD java -jar target/basic-0.0.1-SNAPSHOT.jar --spring.profiles.active=test

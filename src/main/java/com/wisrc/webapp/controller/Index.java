@@ -3,6 +3,7 @@ package com.wisrc.webapp.controller;
 
 import com.wisrc.webapp.entity.UserInfoEntity;
 import com.wisrc.webapp.service.UserInfoService;
+import com.wisrc.webapp.utils.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,12 +30,12 @@ public class Index {
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     @ApiOperation(value = "查询用户信息", notes = "Mybatis测试使用，查询MySQL数据库中用户信息表的用户信息")
     @ResponseBody
-    public String getUserInfo() {
+    public Result getUserInfo() {
         List<UserInfoEntity> userList = userInfoService.getAll();
         StringBuffer sb = new StringBuffer("");
         for (UserInfoEntity m : userList) {
             sb.append(m.toString()).append("<br/>");
         }
-        return sb.toString();
+        return Result.success(sb);
     }
 }

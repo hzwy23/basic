@@ -18,6 +18,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://49.4.2.78:8080/eureka
+      defaultZone: http://49.4.15.21:8080/eureka
   instance:
     prefer-ip-address: true
+
+server:
+  servlet:
+    context-path: /demo
