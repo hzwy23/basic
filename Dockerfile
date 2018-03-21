@@ -4,7 +4,7 @@ MAINTAINER zhanwei_huang hzwy23@163.com
 
 WORKDIR /opt
 
-RUN git clone http://hzwy23:oWCPS-z1fBCvuHN6jXEj@117.78.28.87/hzwy23/basic.git
+RUN git clone http://hzwy23:oWCPS-z1fBCvuHN6jXEj@49.4.10.35/hzwy23/basic.git
 
 WORKDIR basic 
 

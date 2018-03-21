@@ -8,7 +8,7 @@ spring:
       driver-class-name: com.mysql.jdbc.Driver
       username: root
       password: Smart_888
-      url: jdbc:mysql://117.78.44.209:8635/erp_basic?characterEncoding=UTF-8
+      url: jdbc:mysql://49.4.10.211:8635/erp_basic?characterEncoding=UTF-8
       max-active: 20
       validation-query: SELECT 1 FROM DUAL
       initial-size: 10
@@ -18,7 +18,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://49.4.15.21:8080/eureka
+      defaultZone: http://49.4.10.118:8080/eureka
   instance:
     prefer-ip-address: true
 
