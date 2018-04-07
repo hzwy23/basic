@@ -25,3 +25,6 @@ eureka:
 server:
   servlet:
     context-path: /demo
+
+erp:
+  product: ZUUL-SERVER

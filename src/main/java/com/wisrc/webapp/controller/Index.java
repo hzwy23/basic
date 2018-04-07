@@ -2,6 +2,7 @@ package com.wisrc.webapp.controller;
 
 
 import com.wisrc.webapp.entity.UserInfoEntity;
+import com.wisrc.webapp.service.ProductService;
 import com.wisrc.webapp.service.UserInfoService;
 import com.wisrc.webapp.utils.Result;
 import io.swagger.annotations.Api;
@@ -21,6 +22,9 @@ public class Index {
     @Autowired
     private UserInfoService userInfoService;
 
+    @Autowired
+    private ProductService productService;
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ApiOperation(value = "首页", notes = "应用服务首页服务")
     public String index() {
@@ -37,5 +41,12 @@ public class Index {
             sb.append(m.toString()).append("<br/>");
         }
         return Result.success(sb);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/product/info", method = RequestMethod.GET)
+    @ApiOperation(value = "产品查询测试接口", notes = "产品接口测试验证")
+    public Result getProductInfo() {
+        return productService.getProduct("1","2");
     }
 }

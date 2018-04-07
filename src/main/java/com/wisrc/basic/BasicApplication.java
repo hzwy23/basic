@@ -19,7 +19,8 @@ import org.springframework.context.annotation.ImportResource;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients(
-    basePackages = {"com"}
+    basePackages = {"com"},
+    defaultConfiguration = FeignConfiguration.class
 )
 @ImportResource(locations = {"bean/spring-config.xml"})
 public class BasicApplication {
