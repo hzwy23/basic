@@ -58,7 +58,7 @@ spring:
     druid:
       driver-class-name: com.mysql.jdbc.Driver
       username: root
-      password: Smart_888
+      password: 
       url: jdbc:mysql://117.78.44.209:8635/erp_basic?characterEncoding=UTF-8
       max-active: 20
       validation-query: SELECT 1 FROM DUAL
